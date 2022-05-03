@@ -164,18 +164,18 @@ def predictRouteClient():
 #         return Response("Error Occurred! %s" % e)
 
 
-port = int(os.getenv("PORT", 8000))
-if __name__ == "__main__":
-    result_df=None
-    app.run(debug=True)
-
 # port = int(os.getenv("PORT", 8000))
 # if __name__ == "__main__":
-#     host = '0.0.0.0'
-#     # port = 8000
-#     httpd = simple_server.make_server(host, port, app)
-#     print("Serving on %s %d" % (host, port))
-#     httpd.serve_forever()
-#     # app.run(host,port, debug=True)
-#     # docker build -t predictive_maintenence:1.0 .
+#     result_df=None
+#     app.run(debug=True)
+
+port = int(os.getenv("PORT", 8000))
+if __name__ == "__main__":
+    host = '0.0.0.0'
+    # port = 8000
+    httpd = simple_server.make_server(host, port, app)
+    print("Serving on %s %d" % (host, port))
+    httpd.serve_forever()
+    # app.run(host,port, debug=True)
+    # docker build -t predictive_maintenence:1.0 .
 
